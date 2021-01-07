@@ -54,6 +54,9 @@ app.post("/", (req, res) => {
 app.post("/failure.html", (req,res) => {
     res.redirect("/")
 })
+app.post("/success.html", (req,res) => {
+    res.redirect("/")
+})
 app.listen(process.env.PORT || 3000, () => {
     console.log("Running on port 3000")
 })
