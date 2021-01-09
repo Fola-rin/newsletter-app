@@ -1,20 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sucess</title>
     <!-- Bootstrap core CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
+
 <body style="background-color:#eee;">
     <div class="jumbotron" style="text-align: center;margin-top: 20vh;background: none;">
         <h1 class="display-4">🎊 Yay!</h1>
         <p class="lead">Thank you for signing up.</p>
-        <form action="/success.html" method="post">
-            <button class="w-100 btn btn-lg btn-primary mybtn" type="submit">Back to Signup</button>
-        </form>
+
+        <button type="button" class="btn btn-primary" id="trigger" data-bs-toggle="modal" data-bs-target="#myModal">Want to know the current weather at your location?</button>
+        <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog  modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header" style="
+                    border: none;
+                ">
+                        <h3 class="modal-title" id="exampleModalLabel"> Current weather ☁️ </h3>
+                    </div>
+                    <form action="/success.html" method="post">
+                        <input type="text" name="cityName" class="form-control" id="cityInput" placeholder="City name" style="
+                        border-radius: 0;
+                        border-left: 0;
+                        border-top: 0;
+                        border-right: 0;
+                        border-bottom: 1px solid #e5e5e5
+                    ">
+                        <button type="submit" class="btn btn-primary" style="
+                        width: 20%;
+                        margin: 5px;
+                    ">Go</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.6.0/umd/popper.min.js" integrity="sha512-BmM0/BQlqh02wuK5Gz9yrbe7VyIVwOzD1o40yi1IsTjriX/NGF37NyXHfmFzIlMmoSIBXgqDiG1VNU6kB5dBbA==" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
 </body>
+
 </html>
